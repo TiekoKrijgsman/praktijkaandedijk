@@ -1,19 +1,12 @@
-import type { Metadata, Viewport} from "next"
-import { Geist, Azeret_Mono as Geist_Mono } from "next/font/google"
+import type { Metadata} from "next"
 import "./globals.css"
 import { Poppins } from "next/font/google"
 import localFont from "next/font/local"
 import type React from "react"
+import SchemaOrg from "../components/schema-org"
+import { GeistSans } from "geist/font/sans"
+import { GeistMono } from "geist/font/mono"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-})
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-})
 
 const customFont = localFont({
   src: "../public/fonts/DreamAvenue.ttf",
@@ -26,54 +19,73 @@ const poppins = Poppins({
   variable: "--font-poppins",
 })
 
-export const viewport: Viewport = {
-  themeColor: "#AAAFFF",
-  colorScheme: "dark",
-}
-
-export const generateMetadata = async (): Promise<Metadata> => {
-  const title = "Praktijk aan de Dijk | Pedicure"
-  const description = "Pedicure Praktijk in Haarlem. Gespecialiseerd in pedicure behandelingen, voetmassage en spa behandelingen. Boek een afspraak voor gezonde en verzorgde voeten."
-  const url = new URL(`https://praktijkaandedijk.com`)
-
-  return {
-    title,
-    description,
-    metadataBase: url,
-    keywords: [
-      "pedicure Haarlem",
-      "voetverzorging",
-      "spa behandeling",
-      "voetmassage",
-      "likdoorn verwijderen",
-      "nagelverzorging",
-      "eelt verwijderen",
-      "scrub en masker",
-      "pedicure praktijk",
-      "verzorgde voeten",
-      "medische pedicure",
-      "wellness voeten",
-      "gift card pedicure",
+export const metadata: Metadata = {
+  title: "Praktijk aan de Dijk | Pedicure in Haarlem",
+  description:
+    "Pedicure Praktijk in Haarlem. Gespecialiseerd in pedicure behandelingen, voetmassage en spa behandelingen. Pedicure behandelingen vanaf €35, voetmassage, spa behandelingen en likdoornbehandeling. ✓ Persoonlijke aandacht ✓ Direct een afspraak maken",
+  metadataBase: new URL("https://praktijkaandedijk.com"),
+  keywords: [
+    "pedicure Haarlem",
+    "voetverzorging Haarlem",
+    "spa behandeling voeten",
+    "voetmassage Haarlem",
+    "likdoorn verwijderen Haarlem",
+    "nagelverzorging Haarlem",
+    "eelt verwijderen Haarlem",
+    "scrub en masker voeten",
+    "pedicure praktijk Slaperdijkweg",
+    "pedicure behandeling Haarlem",
+    "wellness voeten Haarlem",
+    "cadeaubon pedicure Haarlem",
+  ],
+  openGraph: {
+    title: "Praktijk aan de Dijk | Pedicure in Haarlem",
+    description:
+      "Pedicure praktijk in Haarlem. Pedicure behandelingen, voetmassage en spa behandelingen. Direct een afspraak maken!",
+    url: "https://praktijkaandedijk.com",
+    siteName: "Praktijk aan de Dijk",
+    locale: "nl_NL",
+    type: "website",
+    images: [
+      {
+        url: "/images/flower.png",
+        width: 800,
+        height: 600,
+        alt: "Praktijk aan de Dijk - Pedicure in Haarlem",
+      },
     ],
-    openGraph: {
-      title,
-      description,
-      url,
-      siteName: title,
-      type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
-  }
+  },
+  alternates: {
+    canonical: "https://praktijkaandedijk.com",
+  },
+  verification: {
+    google: "Dd97IZcnzJzOGtO7cPilyXKMGUSw-Txeo9MLDgRkqcY",
+  },
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
-    <html lang="en">
+    <html lang="nl">
+      <head>
+        <SchemaOrg />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${customFont.variable} antialiased`}
+        className={`${GeistSans.variable} ${GeistMono.variable} ${poppins.variable} ${customFont.variable} antialiased`}
       >
         {children}
       </body>
