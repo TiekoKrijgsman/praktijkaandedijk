@@ -1,20 +1,19 @@
-
 "use client"
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { MapPin } from "lucide-react";
+
 export default function PedicureMenu() {
   return (
-    <div className="relative min-h-screen bg-white p-4 md:p-8 bg-[url('/images/flower.png')] bg-no-repeat bg-fixed bg-left-bottom bg-flower-sm md:bg-flower-md lg:bg-flower-lg">
+    <div className="relative min-h-screen bg-stone-50 p-4 md:p-8 bg-[url('/images/flower.png')] bg-no-repeat bg-fixed bg-left-bottom bg-flower-sm md:bg-flower-md lg:bg-flower-lg">
       <div className="max-w-2xl mx-auto space-y-8 relative z-10">
-
         <header className="text-center space-y-2">
           <h1 className="text-[#386427] text-5xl md:text-7xl font-custom drop-shadow-md">Praktijk aan de Dijk</h1>
           <p className="text-[#719c3b] text-lg">Pedicure praktijk (niet medisch)</p>
         </header>
 
         <div className="space-y-6">
-          {[
+          {[ 
             {
               title: "Pedicure Behandeling",
               time: "40 minuten",
@@ -70,13 +69,13 @@ export default function PedicureMenu() {
                 </h2>
                 <div className="h-0.5 bg-[#79994d] flex-1" />
               </div>
-              <div className="relative max-w-md mx-auto flex justify-center">
+              <div className="relative max-w-md mx-auto flex flex-col justify-center items-center space-y-2">
                 <div className="text-[#79994d] space-y-1 md:text-sm text-sm text-center">
                   {treatment.details.map((detail, idx) => (
                     <p key={idx}>{detail}</p>
                   ))}
                 </div>
-                <p className="absolute right-[-80px] top-1/2 transform -translate-y-1/2 text-[#719c3b] font-semibold">{treatment.price}</p>
+                <p className="text-[#719c3b] font-semibold mt-2">{treatment.price}</p>
               </div>
             </section>
           ))}
@@ -110,16 +109,16 @@ export default function PedicureMenu() {
             </Link>
           </p>
           <p className="text-lg flex items-center justify-center gap-2">
-  <MapPin className="w-5 h-5 text-[#405e38]" />
-  <Link
-  href="https://maps.apple.com/?q=Slaperdijkweg+106,+2026BL,+Haarlem"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="text-[#405e38] hover:underline"
->
-  Slaperdijkweg 106, 2026BL, Haarlem
-</Link>
-</p>
+            <MapPin className="w-5 h-5 text-[#405e38]" />
+            <Link
+              href="https://maps.apple.com/?q=Slaperdijkweg+106,+2026BL,+Haarlem"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#405e38] hover:underline"
+            >
+              Slaperdijkweg 106, 2026BL, Haarlem
+            </Link>
+          </p>
         </footer>
       </div>
     </div>
