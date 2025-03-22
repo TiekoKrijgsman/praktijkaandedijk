@@ -53,16 +53,16 @@ export default function PedicureMenu() {
                 "Voetbad met badzout",
                 "Scrub",
                 "Masker",
-                "Massage (20 minuten)",
+                "Voeten Massage (20 minuten)",
               ],
             },
             {
               title: "Gellak",
               detailsWithPrice: [
-                { detail: "Voeten of handen", price: "€ 25" },
-                { detail: "Verwijderen en nieuw lakken", price: "€ 32,50" },
-                { detail: "Verwijderen handen of voeten", price: "€ 10" },
-                { detail: "Verwijderen handen en voeten", price: "€ 17,50" },
+                { detail: "Voeten of handen lakken", price: "€ 25" },
+                { detail: "Lak verwijderen en nieuw lakken", price: "€ 32,50" },
+                { detail: "Lak verwijderen handen of voeten", price: "€ 10" },
+                { detail: "Lak verwijderen handen en voeten", price: "€ 17,50" },
               ],
             },
             {
@@ -117,7 +117,7 @@ export default function PedicureMenu() {
               <h2 className="text-[#405e38] text-xl">Gift Card</h2>
               <div className="h-0.5 bg-[#79994d] flex-1" />
             </div>
-            <p className="text-[#719c3b] text-sm max-w-md mx-auto">Kies een bedrag of behandeling en verwen een persoon naar keuze!</p>
+            <p className="text-[#719c3b] text-sm max-w-md mx-auto">Kies een bedrag of behandeling</p>
           </section>
         </div>
 
@@ -169,15 +169,15 @@ export default function PedicureMenu() {
             />
           </div>
           <div className="mt-2 max-w-xs mx-auto text-[#719c3b] text-sm font-medium leading-snug">
-            <p className="text-[#405e38] font-bold">Ilja – Pedicure</p>
-            <p className="mt-1">
+            <p className="text-[#405e38] font-bold ">Ilja – Pedicure</p>
+            <p className="mt-1 px-20 md:px-5 text-sm md:text-base ">
               Na 33 jaar tandheelkunde heb ik besloten om mij om te scholen. Ik heb mijn opleiding gedaan bij Kollaart in Haarlem. Mijn praktijk heb ik aan huis aan de Slaperdijkweg in Haarlem Noord.
             </p>
           </div>
         </div>
       </div>
 
-<div className="hidden lg:flex fixed bottom-4 right-4 z-30 flex-col items-end">
+<div className="hidden lg:flex fixed bottom-4 right-8 z-30 flex-col items-end">
   <div className="w-40 lg:w-48">
     <Image
       src="/images/ilja.jpg"
