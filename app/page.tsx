@@ -121,14 +121,28 @@ export default function PedicureMenu() {
           </section>
         </div>
 
-        <div className="text-center pt-4">
-          <Button
-            className="bg-[#386427] hover:bg-[#527a47] hover:border text-white px-8 py-2 rounded-md shadow-lg dropshadow-xl"
-            onClick={() => window.open("https://wa.me/31619003480", "_blank")}
-          >
-            Maak direct een afspraak!
-          </Button>
-        </div>
+
+        <div className="text-center pt-4 space-y-4">
+  <div>
+    <Button
+      asChild
+      className="bg-[#79994d] hover:bg-[#91b362] text-white px-8 py-2 rounded-md shadow-lg"
+    >
+      <Link href="/contact">Openingstijden</Link>
+    </Button>
+  </div>
+
+  <div>
+    <Button
+      className="bg-[#386427] hover:bg-[#527a47] hover:border text-white px-8 py-2 rounded-md shadow-lg dropshadow-xl"
+      onClick={() => window.open("https://wa.me/31619003480", "_blank")}
+    >
+      Maak direct een afspraak!
+    </Button>
+  </div>
+</div>
+
+
 
         <footer className="text-center text-[#405e38] space-y-2 pb-2">
           <p className="text-lg">

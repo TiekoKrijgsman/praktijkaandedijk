@@ -1,0 +1,107 @@
+"use client";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { MapPin, Phone, Mail, Clock, Calendar } from "lucide-react";
+
+export default function Contact() {
+  return (
+    <div className="relative bg-stone-50 bg-[url('/images/flower.png')] bg-no-repeat bg-fixed bg-left-bottom bg-flower-sm md:bg-flower-md lg:bg-flower-lg overflow-hidden">
+      <div className="max-w-2xl mx-auto space-y-8 relative z-10 min-h-screen p-4 md:p-8">
+        <header className="text-center space-y-2">
+          <h1 className="text-[#386427] text-5xl md:text-7xl font-custom drop-shadow-md">Praktijk aan de Dijk</h1>
+          <p className="text-[#719c3b] text-lg">Pedicure praktijk (niet medisch)</p>
+        </header>
+
+        <h2 className="text-[#405e38] text-2xl flex justify-center text-center items-center gap-2">
+
+            Afspraak maken? Kies een van de opties hieronder.
+          </h2>
+
+        <div className="flex flex-wrap justify-center gap-4 text-center">
+  <Button
+    asChild
+    className="min-w-[200px] px-6 lg:px-8 py-4 bg-[#386427] hover:bg-[#527a47] text-white rounded-md shadow-lg"
+  >
+    <Link href="https://wa.me/31619003480" target="_blank">
+      <Calendar className="inline-block mr-2" />
+      Maak afspraak
+    </Link>
+  </Button>
+
+  <Button
+    asChild
+    className="min-w-[200px] px-6 lg:px-8 py-4 bg-[#386427] hover:bg-[#527a47] text-white rounded-md shadow-lg"
+  >
+    <Link href="tel:+31619003480">
+      <Phone className="inline-block mr-2" />
+      Bel: 06 - 19 00 34 80
+    </Link>
+  </Button>
+
+  <Button
+    asChild
+    className="min-w-[200px] px-6 lg:px-8 py-4 bg-[#386427] hover:bg-[#527a47] text-white rounded-md shadow-lg"
+  >
+    <Link href="mailto:Aandedijkpedicure@gmail.com">
+      <Mail className="inline-block mr-2" />
+      E-mail
+    </Link>
+  </Button>
+
+  <Button
+    asChild
+    className="min-w-[200px] px-6 lg:px-8 py-4 bg-[#386427] hover:bg-[#527a47] text-white rounded-md shadow-lg"
+  >
+    <Link
+      href="https://maps.apple.com/?q=Slaperdijkweg+106,+2026BL,+Haarlem"
+      target="_blank"
+    >
+      <MapPin className="inline-block mr-2" />
+      Route
+    </Link>
+  </Button>
+</div>
+
+
+        <section className="mt-10 text-center">
+          <h2 className="text-[#405e38] text-2xl mb-4 flex justify-center items-center gap-2">
+            <Clock className="w-6 h-6" />
+            Openingstijden
+          </h2>
+          <div className="overflow-x-auto">
+            <table className="mx-auto border border-[#3d531e] text-[#719c3b] text-sm md:text-base">
+              <thead>
+                <tr>
+                  <th className="border border-[#3d531e] px-4 py-2">Dag</th>
+                  <th className="border border-[#3d531e] px-4 py-2">Tijd</th>
+                </tr>
+              </thead>
+              <tbody>
+    {[
+    ["Maandag", "Gesloten"],
+    ["Dinsdag", "Gesloten"],
+    ["Woensdag", "Gesloten"],
+    ["Donderdag", "09:00 – 17:00"],
+    ["Vrijdag", "09:00 – 17:00"],
+    ["Zaterdag", "Gesloten"],
+    ["Zondag", "Gesloten"],
+  ].map(([day, time]) => {
+    const isOpenDay = day === "Donderdag" || day === "Vrijdag";
+    const textColor = isOpenDay ? "text-[#3d531e] font-bold" : "text-[#719c3b]";
+
+    return (
+      <tr key={day} className={textColor}>
+        <td className="border border-[#3d531e] px-4 py-2">{day}</td>
+        <td className="border border-[#3d531e]  px-4 py-2">{time}</td>
+      </tr>
+    );
+  })}
+</tbody>
+
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+}
