@@ -6,64 +6,57 @@ import { MapPin, Phone, Mail, Clock, Calendar } from "lucide-react";
 export default function Contact() {
   return (
     <div className="relative bg-stone-50 bg-[url('/images/flower.png')] bg-no-repeat bg-fixed bg-left-bottom bg-flower-sm md:bg-flower-md lg:bg-flower-lg overflow-hidden">
-      <div className="max-w-2xl mx-auto space-y-8 relative z-10 min-h-screen p-4 md:p-8">
+      <div className="max-w-2xl mx-auto space-y-8 relative z-10 min-h-screen p-4 md:p-8 pb-0">
         <header className="text-center space-y-2">
-          <h1 className="text-[#386427] text-5xl md:text-7xl font-custom drop-shadow-md">Praktijk aan de Dijk</h1>
+          <h1 className="text-[#386427] text-5xl md:text-7xl font-custom drop-shadow-md">
+            <Link href="/" className="hover:underline">Praktijk aan de Dijk</Link>
+          </h1>
           <p className="text-[#719c3b] text-lg">Pedicure praktijk (niet medisch)</p>
         </header>
 
         <h2 className="text-[#405e38] text-2xl flex justify-center text-center items-center gap-2">
+          Afspraak maken? Kies een van de opties hieronder.
+        </h2>
 
-            Afspraak maken? Kies een van de opties hieronder.
-          </h2>
+        <p className="text-center text-[#719c3b] text-sm -mt-4">
+          Tot 24 uur voor de afspraak kosteloos annuleren of verzetten.
+          <br />
+          Anders ben ik genoodzaakt om de kosten door te berekenen.
+        </p>
 
         <div className="flex flex-wrap justify-center gap-4 text-center">
-  <Button
-    asChild
-    className="min-w-[200px] px-6 lg:px-8 py-4 bg-[#386427] hover:bg-[#527a47] text-white rounded-md shadow-lg"
-  >
-    <Link href="https://wa.me/31619003480" target="_blank">
-      <Calendar className="inline-block mr-2" />
-      Maak afspraak
-    </Link>
-  </Button>
+          <Button
+            asChild
+            className="min-w-[200px] px-6 lg:px-8 py-4 bg-[#386427] hover:bg-[#527a47] text-white rounded-md shadow-lg"
+          >
+            <Link href="https://wa.me/31619003480" target="_blank">
+              <Calendar className="inline-block mr-2" />
+              WhatsApp
+            </Link>
+          </Button>
 
-  <Button
-    asChild
-    className="min-w-[200px] px-6 lg:px-8 py-4 bg-[#386427] hover:bg-[#527a47] text-white rounded-md shadow-lg"
-  >
-    <Link href="tel:+31619003480">
-      <Phone className="inline-block mr-2" />
-      Bel: 06 - 19 00 34 80
-    </Link>
-  </Button>
+          <Button
+            asChild
+            className="min-w-[200px] px-6 lg:px-8 py-4 bg-[#386427] hover:bg-[#527a47] text-white rounded-md shadow-lg"
+          >
+            <Link href="tel:+31619003480">
+              <Phone className="inline-block mr-2" />
+             06 - 19 00 34 80
+            </Link>
+          </Button>
 
-  <Button
-    asChild
-    className="min-w-[200px] px-6 lg:px-8 py-4 bg-[#386427] hover:bg-[#527a47] text-white rounded-md shadow-lg"
-  >
-    <Link href="mailto:Aandedijkpedicure@gmail.com">
-      <Mail className="inline-block mr-2" />
-      E-mail
-    </Link>
-  </Button>
+          <Button
+            asChild
+            className="min-w-[200px] px-6 lg:px-8 py-4 bg-[#386427] hover:bg-[#527a47] text-white rounded-md shadow-lg"
+          >
+            <Link href="mailto:Aandedijkpedicure@gmail.com">
+              <Mail className="inline-block mr-2" />
+              E-mail
+            </Link>
+          </Button>
+        </div>
 
-  <Button
-    asChild
-    className="min-w-[200px] px-6 lg:px-8 py-4 bg-[#386427] hover:bg-[#527a47] text-white rounded-md shadow-lg"
-  >
-    <Link
-      href="https://maps.apple.com/?q=Slaperdijkweg+106,+2026BL,+Haarlem"
-      target="_blank"
-    >
-      <MapPin className="inline-block mr-2" />
-      Route
-    </Link>
-  </Button>
-</div>
-
-
-        <section className="mt-10 text-center">
+        <section className="mt-10 text-center pb-8">
           <h2 className="text-[#405e38] text-2xl mb-4 flex justify-center items-center gap-2">
             <Clock className="w-6 h-6" />
             Openingstijden
@@ -77,31 +70,47 @@ export default function Contact() {
                 </tr>
               </thead>
               <tbody>
-    {[
-    ["Maandag", "Gesloten"],
-    ["Dinsdag", "Gesloten"],
-    ["Woensdag", "Gesloten"],
-    ["Donderdag", "09:00 – 17:00"],
-    ["Vrijdag", "09:00 – 17:00"],
-    ["Zaterdag", "Gesloten"],
-    ["Zondag", "Gesloten"],
-  ].map(([day, time]) => {
-    const isOpenDay = day === "Donderdag" || day === "Vrijdag";
-    const textColor = isOpenDay ? "text-[#3d531e] font-bold" : "text-[#719c3b]";
-
-    return (
-      <tr key={day} className={textColor}>
-        <td className="border border-[#3d531e] px-4 py-2">{day}</td>
-        <td className="border border-[#3d531e]  px-4 py-2">{time}</td>
-      </tr>
-    );
-  })}
-</tbody>
-
+                {[
+                  ["Maandag", "Gesloten"],
+                  ["Dinsdag", "Gesloten"],
+                  ["Woensdag", "Gesloten"],
+                  ["Donderdag", "09:00 – 17:00"],
+                  ["Vrijdag", "09:00 – 17:00"],
+                  ["Zaterdag", "Gesloten"],
+                  ["Zondag", "Gesloten"],
+                ].map(([day, time]) => {
+                  const isOpenDay = day === "Donderdag" || day === "Vrijdag";
+                  const textColor = isOpenDay ? "text-[#3d531e] font-bold" : "text-[#719c3b]";
+                  return (
+                    <tr key={day} className={textColor}>
+                      <td className="border border-[#3d531e] px-4 py-2">{day}</td>
+                      <td className="border border-[#3d531e] px-4 py-2">{time}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
             </table>
           </div>
         </section>
       </div>
+
+      <footer className="text-center text-[#405e38] space-y-2 pb-4">
+        <p className="text-lg flex items-center justify-center gap-2">
+          <MapPin className="w-5 h-5 text-[#405e38]" />
+          <Link
+            href="https://maps.apple.com/?q=Slaperdijkweg+106,+2026BL,+Haarlem"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#405e38] hover:underline"
+          >
+            Slaperdijkweg 106, 2026BL, Haarlem
+          </Link>
+        </p>
+        <p className="text-[#93b589]">
+          KVK: 91923948<br />
+          BTW: NL004925458B48
+        </p>
+      </footer>
     </div>
   );
 }

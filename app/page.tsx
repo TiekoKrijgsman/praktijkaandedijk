@@ -13,6 +13,17 @@ export default function PedicureMenu() {
           <p className="text-[#719c3b] text-lg">Pedicure praktijk (niet medisch)</p>
         </header>
 
+        <div className="text-center">
+  <Button
+    asChild
+    className="bg-[#386427] hover:bg-[#527a47] text-white px-8 py-2 rounded-md shadow-lg dropshadow-xl inline-block"
+  >
+    <Link href="/contact">Maak direct een afspraak!</Link>
+  </Button>
+</div>
+
+
+
         <div className="space-y-6">
           {[
             {
@@ -123,23 +134,8 @@ export default function PedicureMenu() {
 
 
         <div className="text-center pt-4 space-y-4">
-  <div>
-    <Button
-      asChild
-      className="bg-[#79994d] hover:bg-[#91b362] text-white px-8 py-2 rounded-md shadow-lg"
-    >
-      <Link href="/contact">Openingstijden</Link>
-    </Button>
-  </div>
 
-  <div>
-    <Button
-      className="bg-[#386427] hover:bg-[#527a47] hover:border text-white px-8 py-2 rounded-md shadow-lg dropshadow-xl"
-      onClick={() => window.open("https://wa.me/31619003480", "_blank")}
-    >
-      Maak direct een afspraak!
-    </Button>
-  </div>
+
 </div>
 
 
