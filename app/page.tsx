@@ -81,6 +81,11 @@ export default function PedicureMenu() {
               price: "€ 12,50",
               details: ["Verwijderen van likdoorn"],
             },
+            {
+              title: "Nagelbeugel",
+              price: "€ 20,00",
+              details: ["Nagelbeugel plaatsen"],
+            },
           ].map((treatment, index) => (
             <section key={index} className="relative text-center">
               <div className="flex items-center justify-center gap-4 mb-4">
