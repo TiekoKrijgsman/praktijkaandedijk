@@ -1,24 +1,28 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { MapPin, Phone, Mail, Clock, Calendar } from "lucide-react";
+import { Phone, Mail, Clock, Calendar } from "lucide-react";
+import Header from "@/components/Header";
+import IljaBio from "@/components/IljaBio";
+import Footer from "@/components/ui/Footer";
 
 export default function Contact() {
   return (
-    <div className="relative bg-stone-50 bg-[url('/images/flower.png')] bg-no-repeat bg-fixed bg-left-bottom bg-flower-sm md:bg-flower-md lg:bg-flower-lg overflow-hidden">
+    <div className="relative bg-stone-50 bg-[url('/images/flower.png')] bg-no-repeat bg-fixed bg-left-bottom bg-flower-sm md:bg-flower-md lg:bg-flower-lg">
+            <Header />
       <div className="max-w-2xl mx-auto space-y-8 relative z-10 min-h-screen p-4 md:p-8 pb-0">
         <header className="text-center space-y-2">
           <h1 className="text-[#386427] text-5xl md:text-7xl font-custom drop-shadow-md">
-            <Link href="/" className="hover:underline">Praktijk aan de Dijk</Link>
+            Praktijk aan de Dijk
           </h1>
           <p className="text-[#719c3b] text-lg">Pedicure praktijk (niet medisch)</p>
         </header>
 
-        <h2 className="text-[#405e38] text-2xl flex justify-center text-center items-center gap-2">
+        <h2 className="text-[#405e38] text-md md:text-2xl flex justify-center text-center items-center gap-2">
           Afspraak maken? Kies een van de opties hieronder.
         </h2>
 
-        <p className="text-center text-[#719c3b] text-sm -mt-4">
+        <p className="text-center text-[#719c3b] text-sm md:text-md">
           Tot 24 uur voor de afspraak kosteloos annuleren of verzetten.
           <br />
           Anders ben ik genoodzaakt om de kosten door te berekenen.
@@ -94,23 +98,8 @@ export default function Contact() {
         </section>
       </div>
 
-      <footer className="text-center text-[#405e38] space-y-2 pb-4">
-        <p className="text-lg flex items-center justify-center gap-2">
-          <MapPin className="w-5 h-5 text-[#405e38]" />
-          <Link
-            href="https://maps.apple.com/?q=Slaperdijkweg+106,+2026BL,+Haarlem"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#405e38] hover:underline"
-          >
-            Slaperdijkweg 106, 2026BL, Haarlem
-          </Link>
-        </p>
-        <p className="text-[#93b589]">
-          KVK: 91923948<br />
-          BTW: NL004925458B48
-        </p>
-      </footer>
+      <Footer />
+              <IljaBio />
     </div>
   );
 }
