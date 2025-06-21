@@ -19,7 +19,6 @@ export default function PedicureMenu() {
           {[
             {
               title: "Pedicure Behandeling",
-              time: "30 minuten",
               price: "€ 35",
               details: [
                 "Voeten desinfecteren",
