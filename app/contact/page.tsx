@@ -10,15 +10,32 @@ export default function Contact() {
   return (
     <div className="relative bg-stone-50 bg-[url('/images/flower.png')] bg-no-repeat bg-fixed bg-left-bottom bg-flower-sm md:bg-flower-md lg:bg-flower-lg">
             <Header />
-      <div className="max-w-2xl mx-auto space-y-8 relative z-10 min-h-screen p-4 md:p-8 pb-0">
-        <header className="text-center space-y-2">
-          <h1 className="text-[#386427] text-5xl md:text-7xl font-custom drop-shadow-md">
-            Praktijk aan de Dijk
-          </h1>
-          <p className="text-[#719c3b] text-lg">Pedicure praktijk (niet medisch)</p>
-        </header>
 
-        <h2 className="text-[#405e38] text-md md:text-2xl flex justify-center text-center items-center gap-2">
+            <div className="mx-auto w-full max-w-2xl px-4">
+  <div className="mt-4 flex items-start gap-3 rounded-md border border-yellow-300 bg-yellow-50 p-4 text-sm md:text-base text-yellow-800 shadow-sm">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="w-5 h-5 mt-0.5 shrink-0 text-yellow-600"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M12 9v2.25m0 4.5h.007M12 3a9 9 0 100 18 9 9 0 000-18z"
+      />
+    </svg>
+    <p>
+      <strong>Let op:</strong> Vanaf <strong>1 augustus</strong> werk ik alleen op <strong>woensdag</strong> en <strong>donderdag</strong>.
+    </p>
+  </div>
+</div>
+<div className="max-w-2xl mx-auto space-y-4 md:space-y-8 relative z-10 p-2 md:p-8 pb-0">
+
+
+        <h2 className="text-[#405e38] text-lg md:text-2xl flex justify-center text-center items-center gap-2">
           Afspraak maken? Kies een van de opties hieronder.
         </h2>
 
