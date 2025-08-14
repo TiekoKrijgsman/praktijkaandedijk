@@ -94,13 +94,13 @@ export default function Contact() {
                 {[
                   ["Maandag", "Gesloten"],
                   ["Dinsdag", "Gesloten"],
-                  ["Woensdag", "Gesloten"],
+                  ["Woensdag", "09:00 - 17:00"],
                   ["Donderdag", "09:00 – 17:00"],
-                  ["Vrijdag", "09:00 – 17:00"],
+                  ["Vrijdag", "Gesloten"],
                   ["Zaterdag", "Gesloten"],
                   ["Zondag", "Gesloten"],
                 ].map(([day, time]) => {
-                  const isOpenDay = day === "Donderdag" || day === "Vrijdag";
+                  const isOpenDay = day === "Woensdag" || day === "Donderdag";
                   const textColor = isOpenDay ? "text-[#3d531e] font-bold" : "text-[#719c3b]";
                   return (
                     <tr key={day} className={textColor}>
