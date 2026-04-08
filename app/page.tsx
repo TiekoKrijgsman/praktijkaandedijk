@@ -3,7 +3,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import TreatmentCard from "@/components/TreatmentCard";
-import GiftCard from "@/components/GiftCard";
+
 import IljaBio from "@/components/IljaBio";
 import Footer from "@/components/ui/Footer";
 import { treatments } from "@/data/treatments";
@@ -30,7 +30,6 @@ export default function PedicureMenu() {
             />
           ))}
 
-          <GiftCard />
         </div>
 
         <Footer />
