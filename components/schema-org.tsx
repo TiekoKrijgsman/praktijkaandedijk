@@ -4,7 +4,7 @@ export default function SchemaOrg() {
     "@type": ["BeautySalon", "HealthAndBeautyBusiness"],
     name: "Praktijk aan de Dijk",
     description:
-      "Cosmetische pedicure praktijk in Haarlem Noord. Gespecialiseerd in pedicure behandelingen, spa behandelingen, gellak en nagelbeugels. Persoonlijke aandacht aan de Slaperdijkweg.",
+      "Pedicure praktijk (niet medisch) in Haarlem Noord. Gespecialiseerd in pedicure behandelingen, spa behandelingen, gellak en nagelbeugels. Persoonlijke aandacht aan de Slaperdijkweg.",
     image: "https://praktijkaandedijk.com/images/pedicure_spa_behandeling.jpg",
     "@id": "https://praktijkaandedijk.com",
     url: "https://praktijkaandedijk.com",
@@ -149,7 +149,7 @@ export default function SchemaOrg() {
         name: "Is Praktijk aan de Dijk een medische pedicure?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Nee, Praktijk aan de Dijk is een cosmetische pedicure praktijk (niet medisch). Wij bieden pedicure behandelingen, spa behandelingen, gellak en nagelbeugels.",
+          text: "Nee, Praktijk aan de Dijk is een pedicure praktijk (niet medisch). Wij bieden pedicure behandelingen, spa behandelingen, gellak en nagelbeugels.",
         },
       },
     ],

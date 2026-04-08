@@ -47,7 +47,7 @@ export default function Hero() {
             Pedicure praktijk in Haarlem Noord
           </p>
           <p className="text-green-400 text-sm mt-1">
-            Cosmetische pedicure
+            (niet medisch)
           </p>
         </motion.div>
 

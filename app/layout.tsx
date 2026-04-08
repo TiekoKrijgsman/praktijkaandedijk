@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Praktijk aan de Dijk | Pedicure Haarlem Noord",
     description:
-      "Cosmetische pedicure in Haarlem Noord. Pedicure, spa behandelingen, gellak en scrub. Direct een afspraak maken!",
+      "Pedicure praktijk in Haarlem Noord. Pedicure, spa behandelingen, gellak en scrub. Direct een afspraak maken!",
     url: "https://praktijkaandedijk.com",
     siteName: "Praktijk aan de Dijk",
     locale: "nl_NL",
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Praktijk aan de Dijk | Pedicure Haarlem Noord",
     description:
-      "Cosmetische pedicure in Haarlem Noord. Behandelingen vanaf €35. Spa, gellak, scrub en meer.",
+      "Pedicure praktijk in Haarlem Noord. Behandelingen vanaf €35. Spa, gellak, scrub en meer.",
     images: ["/images/pedicure_spa_behandeling.jpg"],
   },
   alternates: {
