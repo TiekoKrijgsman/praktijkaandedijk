@@ -26,7 +26,7 @@ export default function IljaBio() {
           </div>
           <div className="mt-4 text-center">
             <p className="text-green-800 font-semibold text-base">Ilja</p>
-            <p className="text-green-500 text-xs mb-2">Pedicure Specialist</p>
+            <p className="text-green-500 text-xs mb-2">Pedicure</p>
             <p className="text-green-600 text-sm leading-relaxed max-w-xs">
               Na 33 jaar tandheelkunde heb ik besloten om mij om te scholen.
               Ik heb mijn opleiding gedaan bij Kollaart in Haarlem.
@@ -55,7 +55,7 @@ export default function IljaBio() {
           </div>
           <div className="mt-4 text-center">
             <p className="text-green-800 font-semibold text-base">Ilja</p>
-            <p className="text-green-500 text-xs mb-2">Pedicure Specialist</p>
+            <p className="text-green-500 text-xs mb-2">Pedicure</p>
             <p className="text-green-600 text-sm leading-relaxed">
               Na 33 jaar tandheelkunde heb ik besloten om mij om te scholen.
               Ik heb mijn opleiding gedaan bij Kollaart in Haarlem.
