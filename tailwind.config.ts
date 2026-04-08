@@ -14,6 +14,19 @@ export default {
 			custom: "var(--font-custom), sans-serif",
 		  },
   		colors: {
+			green: {
+				50: '#f0f5ec',
+				100: '#dce8d4',
+				200: '#b8d1a8',
+				300: '#93b589',
+				400: '#719c3b',
+				500: '#79994d',
+				600: '#527a47',
+				700: '#405e38',
+				800: '#386427',
+				900: '#2d4f1f',
+				950: '#1a3010',
+			},
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -60,11 +73,25 @@ export default {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
-		  backgroundSize: {
+		backgroundSize: {
 			'flower-sm': '100px 150px',
 			'flower-md': '200px 300px',
 			'flower-lg': '250px 350px',
-		  }
+		},
+		keyframes: {
+			'fade-up': {
+				'0%': { opacity: '0', transform: 'translateY(20px)' },
+				'100%': { opacity: '1', transform: 'translateY(0)' },
+			},
+			'fade-in': {
+				'0%': { opacity: '0' },
+				'100%': { opacity: '1' },
+			},
+		},
+		animation: {
+			'fade-up': 'fade-up 0.6s ease-out forwards',
+			'fade-in': 'fade-in 0.6s ease-out forwards',
+		},
    	}
   },
   plugins: [require("tailwindcss-animate")],

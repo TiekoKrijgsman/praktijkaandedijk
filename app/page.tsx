@@ -1,138 +1,41 @@
 "use client";
 
 import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import TreatmentCard from "@/components/TreatmentCard";
+import GiftCard from "@/components/GiftCard";
 import IljaBio from "@/components/IljaBio";
 import Footer from "@/components/ui/Footer";
+import { treatments } from "@/data/treatments";
 
 export default function PedicureMenu() {
   return (
-    <div className="relative bg-stone-50 bg-[url('/images/flower.png')] bg-no-repeat bg-fixed bg-left-bottom bg-flower-sm md:bg-flower-md lg:bg-flower-lg">
+    <div className="relative min-h-screen bg-gradient-to-b from-stone-50 via-green-50/20 to-stone-50">
+      {/* Fixed flower background */}
+      <div className="hidden md:block fixed inset-0 pointer-events-none z-0 bg-[url('/images/flower.png')] bg-no-repeat bg-left-bottom md:bg-flower-md lg:bg-flower-lg" aria-hidden />
       <Header />
-      <div className="max-w-2xl mx-auto space-y-8 relative z-10 min-h-screen p-4 md:p-8">
-      <header className="text-center space-y-2">
-          <h1 className="text-[#386427] text-5xl md:text-7xl font-custom drop-shadow-md">Praktijk aan de Dijk
-          </h1>
-          <p className="text-[#719c3b] text-lg">Pedicure praktijk (niet medisch)</p>
-        </header>
 
-        <div className="space-y-6">
-          {[
-            {
-              title: "Pedicure Behandeling",
-              price: "€ 35",
-              details: [
-                "Voeten desinfecteren",
-                "Nagel omgeving reinigen",
-                "Nagels knippen",
-                "Nagels frezen",
-                "Eelt verwijderen",
-              ],
-            },
-            {
-              title: "Scrub + Masker",
-              time: "20 minuten",
-              price: "€ 10",
-              details: [
-                "In combinatie met de pedicure behandeling of voetmassage ideaal bij zeer droge voeten",
-              ],
-            },
-            {
-              title: "Voeten Massage",
-              time: "30 minuten",
-              price: "€ 30",
-              details: [
-                "Desinfecteren van de voeten",
-                "Massage met geurende verzorgende olie",
-              ],
-            },
-            {
-              title: "Spa Behandeling",
-              time: "75 minuten",
-              price: "€ 70",
-              details: [
-                "Pedicure behandeling",
-                "Voetbad met badzout",
-                "Scrub",
-                "Masker",
-                "Voeten Massage (20 minuten)",
-              ],
-            },
-            {
-              title: "Gellak",
-              detailsWithPrice: [
-                { detail: "Voeten of handen lakken", price: "€ 25" },
-                { detail: "Lak verwijderen en nieuw lakken", price: "€ 32,50" },
-                { detail: "Lak verwijderen handen of voeten", price: "€ 10" },
-                { detail: "Lak verwijderen handen en voeten", price: "€ 17,50" },
-              ],
-            },
-            {
-              title: "Likdoorn",
-              price: "€ 12,50",
-              details: ["Verwijderen van likdoorn"],
-            },
-            {
-              title: "Nagelbeugel",
-              price: "€ 20,00",
-              details: ["Nagelbeugel plaatsen"],
-            },
-          ].map((treatment, index) => (
-            <section key={index} className="relative text-center">
-              <div className="flex items-center justify-center gap-4 mb-4">
-                <div className="h-0.5 bg-[#79994d] flex-1" />
-                <h2 className="text-[#405e38] font-bold md:text-xl text-base whitespace-nowrap px-4 drop-shadow-md">
-                  {treatment.title}{" "}
-                  {treatment.time && (
-                    <span className="text-sm">({treatment.time})</span>
-                  )}
-                </h2>
-                <div className="h-0.5 bg-[#79994d] flex-1" />
-              </div>
-              <div className="relative max-w-md mx-auto flex flex-col justify-center items-center space-y-2">
-                {treatment.details && (
-                  <div className="text-[#79994d] space-y-1 md:text-sm text-sm text-center">
-                    {treatment.details.map((detail, idx) => (
-                      <p key={idx}>{detail}</p>
-                    ))}
-                  </div>
-                )}
+      <main className="max-w-4xl mx-auto relative z-10 px-4 md:px-8 pb-4">
+        <Hero />
 
-                {treatment.detailsWithPrice && (
-                  <div className="text-[#79994d] space-y-1 md:text-sm text-sm text-center">
-                    {treatment.detailsWithPrice.map((item, idx) => (
-                      <p key={idx}>
-                        {item.detail} –{" "}
-                        <span className="text-[#719c3b] font-semibold">
-                          {item.price}
-                        </span>
-                      </p>
-                    ))}
-                  </div>
-                )}
-
-                {treatment.price && !treatment.detailsWithPrice && (
-                  <p className="text-[#719c3b] font-semibold mt-2">
-                    {treatment.price}
-                  </p>
-                )}
-              </div>
-            </section>
+        <h2 className="text-green-700 text-lg md:text-xl font-semibold text-center mt-8 mb-2">
+          Onze Behandelingen
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {treatments.map((treatment, index) => (
+            <TreatmentCard
+              key={treatment.title}
+              treatment={treatment}
+              index={index}
+            />
           ))}
 
-          <section className="text-center">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <div className="h-0.5 bg-[#79994d] flex-1" />
-              <h2 className="text-[#405e38] text-xl">Gift Card</h2>
-              <div className="h-0.5 bg-[#79994d] flex-1" />
-            </div>
-            <p className="text-[#719c3b] text-sm max-w-md mx-auto">
-              Kies een bedrag of behandeling
-            </p>
-          </section>
+          <GiftCard />
         </div>
+
         <Footer />
         <IljaBio />
-      </div>
+      </main>
     </div>
   );
 }
