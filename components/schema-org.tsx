@@ -141,7 +141,7 @@ export default function SchemaOrg() {
         name: "Hoe kan ik een afspraak maken?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "U kunt een afspraak maken via WhatsApp, telefonisch (06-19003480) of per e-mail (Aandedijkpedicure@gmail.com). Tot 24 uur voor de afspraak kunt u kosteloos annuleren.",
+          text: "U kunt een afspraak maken via WhatsApp, telefonisch (06-19003480) of per e-mail (Aandedijkpedicure@gmail.com). Tot 48 uur voor de afspraak kunt u kosteloos annuleren.",
         },
       },
       {

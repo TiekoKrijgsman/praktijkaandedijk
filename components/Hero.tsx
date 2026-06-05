@@ -58,6 +58,22 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mt-6 mx-auto w-24 h-px bg-gradient-to-r from-transparent via-green-400 to-transparent"
         />
+
+        {/* New clients note */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="mt-6 flex justify-center"
+        >
+          <div className="relative max-w-sm md:max-w-xl rounded-2xl rounded-bl-sm bg-white/80 border border-green-100 px-5 py-3 md:px-8 md:py-4 shadow-sm">
+            <p className="text-green-700 text-sm md:text-lg leading-snug">
+              Welkom! Ik neem op dit moment weer nieuwe klanten aan.
+            </p>
+            {/* little speech-bubble tail */}
+            <span className="absolute -bottom-1.5 left-5 h-3 w-3 rotate-45 bg-white/80 border-b border-r border-green-100" />
+          </div>
+        </motion.div>
       </motion.div>
     </section>
   );

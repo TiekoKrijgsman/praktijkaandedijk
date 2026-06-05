@@ -87,7 +87,7 @@ export default function Contact() {
           transition={{ duration: 0.4, delay: 1 }}
           className="text-center text-green-500 text-xs md:text-sm mt-6 max-w-lg mx-auto leading-relaxed"
         >
-          Tot 24 uur voor de afspraak kosteloos annuleren of verzetten.
+          Tot 48 uur voor de afspraak kosteloos annuleren of verzetten.
           <br />
           Anders ben ik genoodzaakt om de kosten door te berekenen.
         </motion.p>
